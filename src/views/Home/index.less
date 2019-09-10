@@ -1,0 +1,30 @@
+@import '~@/theme/_variable.less';
+
+@home: ~'@{vm-prefix}-home';
+
+.@{home} {
+  &-top {
+    position: relative;
+  	height: 150px;
+    margin-bottom: 100px;
+    color: #fff;
+    background-color: #1496f1;
+  	&:after {
+      position: absolute;
+      content: '';
+      width: 140%;
+      height: 100px;
+      bottom: -100px;
+      left: -20%;
+      border-radius: 0 0 50% 50%;
+      background-color: #1496f1;
+      z-index: -1;
+	  }
+    .van-grid-item__content {
+      background-color: transparent;
+    }
+    .van-grid-item__text {
+      color: #fff;
+    }
+  }
+}

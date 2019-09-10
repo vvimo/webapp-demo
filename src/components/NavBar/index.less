@@ -1,0 +1,29 @@
+@import '~@/theme/_variable.less';
+
+@navbar: ~'@{vm-prefix}-navbar';
+
+.@{navbar} {
+  position: relative;
+  &-left {
+    position: relative;
+    float: left;
+    & > div + {
+      margin-left: 8px;
+    }
+  }
+  &-center {
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 16px;
+    text-align: center;
+    user-select: none;
+  }
+  &-right {
+    position: relative;
+    float: right;
+    & > div + {
+      margin-right: 8px;
+    }
+  }
+}

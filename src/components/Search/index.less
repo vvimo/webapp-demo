@@ -1,0 +1,58 @@
+@import '~@/theme/_variable.less';
+
+@search: ~'@{vm-prefix}-search';
+
+.@{search} {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  &-content {
+    display: flex;
+    flex: 1;
+    padding-left: 8px;
+    background-color: #f7f8fA;
+    border-radius: 2px;
+  }
+  &-cell {
+    position: relative;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    line-height: 24px;
+    padding-left: 8px;
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+    background-color: transparent;
+    overflow: hidden;
+    &-icon-left {
+      margin-right: 6px;
+      .van-icon {
+        display: block;
+        min-width: 1em;
+        font-size: 1rem;
+        line-height: inherit;
+      }
+    }
+    &-value {
+      position: relative;
+      flex: 1;
+      text-align: left;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+  }
+  &-control {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    resize: none;
+  }
+  &:after {
+    border-radius: 40px;
+  }
+}
