@@ -1,0 +1,15 @@
+export const enum MenuType {
+  search = '查询',
+  assets = '理财',
+  wealth = '转财',
+  loan = '贷款',
+  finance = '跨境金融',
+  card = '信用卡',
+  services = '高端服务',
+  life = '生活',
+  network = '网点',
+  account = '办卡开户',
+  settings = '设置',
+  assistant = '助手',
+  recommend = '为您推荐',
+}

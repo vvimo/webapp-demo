@@ -1,5 +1,5 @@
 <template>
-  <van-pull-refresh class="vm-home" v-model="isLoading">
+  <div class="vm-home">
     <div class="vm-home-top">
       <vm-nav-bar :right-arrow="true">
         <vm-search></vm-search>
@@ -18,10 +18,14 @@
     </div>
     <van-grid :border="false" :square="true" :column-num="5">
       <van-grid-item
-        v-for="value in 10"
-        :key="value"
+        v-for="(item, index) in reversedMenu"
+        :key="index"
+        :icon="item.icon"
+        :text="item.name"
+      />
+      <van-grid-item
         icon="photo-o"
-        text="文字"
+        text="全部"
       />
     </van-grid>
     <van-notice-bar
@@ -36,7 +40,7 @@
         <img v-lazy="image" />
       </van-swipe-item>
     </van-swipe>
-  </van-pull-refresh>
+  </div>
 </template>
 
 <script lang="ts" src="./index.ts"></script>
